@@ -1,8 +1,8 @@
-2019-03-21 20:17:53,843 - logs… - INFO - resultPathD:\interfaceTest\result\report.html
-2019-03-21 20:17:53,843 - logs… - INFO - caseListFileD:\interfaceTest\caselist.txt
-2019-03-21 20:17:53,844 - logs… - INFO - caseList[]
-2019-03-21 20:17:54,032 - logs… - INFO - {
-  "activityCountdown": 2173415122,
+2019-03-22 12:14:19,915 - logs… - INFO - resultPathD:\interfacetTest\result\report.html
+2019-03-22 12:14:19,915 - logs… - INFO - caseListFileD:\interfacetTest\caselist.txt
+2019-03-22 12:14:19,915 - logs… - INFO - caseList[]
+2019-03-22 12:14:20,133 - logs… - INFO - {
+  "activityCountdown": 2115935880,
   "code": 200,
   "levelList": [
     {
@@ -69,15 +69,15 @@
   ],
   "msg": "操作成功！"
 }
-2019-03-21 20:17:54,090 - logs… - INFO - {
+2019-03-22 12:14:20,188 - logs… - INFO - {
   "code": 101,
   "msg": "未登录！"
 }
-2019-03-21 20:17:54,121 - logs… - INFO - {
+2019-03-22 12:14:20,229 - logs… - INFO - {
   "code": 101,
   "msg": "未登录！"
 }
-2019-03-21 20:17:54,154 - logs… - INFO - {
+2019-03-22 12:14:20,270 - logs… - INFO - {
   "code": 101,
   "msg": "未登录！"
 }
