@@ -1,0 +1,83 @@
+2019-03-21 20:17:53,843 - logs… - INFO - resultPathD:\interfaceTest\result\report.html
+2019-03-21 20:17:53,843 - logs… - INFO - caseListFileD:\interfaceTest\caselist.txt
+2019-03-21 20:17:53,844 - logs… - INFO - caseList[]
+2019-03-21 20:17:54,032 - logs… - INFO - {
+  "activityCountdown": 2173415122,
+  "code": 200,
+  "levelList": [
+    {
+      "differLevel": 3,
+      "goodsId": 2236,
+      "icon": "https://file-dev.dayutang.cn/2019/03/04/1551698408221.gif",
+      "level": 3,
+      "prizeName": "最火爆的3门课程大礼包&36节名师精讲音频大课",
+      "prizeState": 0,
+      "prizeType": 1,
+      "receiveNum": 686,
+      "receiveUserList": [
+        "http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJFc8WsX8ZJUwUXG2rglsYfaCvjLwibTTXsEGTEJZuye03zU6oiaj99ic2LenxcTQSbpkANwNHibeFPLw/132",
+        "http://thirdwx.qlogo.cn/mmopen/vi_32/jYibR289FjVcYEWasyQlsGyHNUzjnR6pNDmfa3Pj2HyAkbTHvmbxnTd8muyxZlwqYy3wk5ngmsTGibJJLAsh4xLw/132",
+        "http://thirdwx.qlogo.cn/mmopen/O5IB5rptd1qiadC1icViaNobBjZASfvia9ZbJJfAHibhkrsueicDlzlwMdbeibb8hnR6U7ud2xiaq4jD2WQhuQx7It6QdzTiaricVvQqUr/132",
+        "http://thirdwx.qlogo.cn/mmopen/2FqrIau1N1ZruXV1VH7VKiadtcHG6zHWpUVowMlZfia8JKYJpEUZWWWxqibNKFFDSlfSbSmYQZwNwC49UWyEo8pKKOJnUVcsuGo/132"
+      ],
+      "shortName": "最火爆的3门&36节名师精讲音频大课",
+      "taskPrizeIds": "1168",
+      "worth": 19900
+    },
+    {
+      "differLevel": 9,
+      "goodsId": 2235,
+      "icon": "https://file-dev.dayutang.cn/2019/03/05/1551763691812.png",
+      "level": 9,
+      "prizeName": "《国际大奖短篇小说》&全彩4册 包邮到家",
+      "prizeState": 0,
+      "prizeType": 2,
+      "receiveNum": 126,
+      "receiveUserList": [],
+      "shortName": "《国际大奖短篇小说》&全彩4册",
+      "taskPrizeIds": "1163,1164,1165,1166,1167",
+      "worth": 29900
+    },
+    {
+      "differLevel": 18,
+      "goodsId": 2234,
+      "icon": "https://file-dev.dayutang.cn/2019/03/05/1551763705046.png",
+      "level": 18,
+      "prizeName": "《疯狂学校》&全彩6册 包邮到家",
+      "prizeState": 0,
+      "prizeType": 1,
+      "receiveNum": 51,
+      "receiveUserList": [],
+      "shortName": "《疯狂学校》&全彩6册",
+      "taskPrizeIds": "1169",
+      "worth": 39900
+    },
+    {
+      "differLevel": 30,
+      "goodsId": 2233,
+      "icon": "https://file-dev.dayutang.cn/2019/03/05/1551763755931.png",
+      "level": 30,
+      "prizeName": "足足30盒乐高型玩具&包邮到家",
+      "prizeState": 0,
+      "prizeType": 1,
+      "receiveNum": 0,
+      "receiveUserList": [],
+      "shortName": "足足30盒乐高型玩具大礼包&包邮到家",
+      "taskPrizeIds": "1170",
+      "worth": 49900
+    }
+  ],
+  "msg": "操作成功！"
+}
+2019-03-21 20:17:54,090 - logs… - INFO - {
+  "code": 101,
+  "msg": "未登录！"
+}
+2019-03-21 20:17:54,121 - logs… - INFO - {
+  "code": 101,
+  "msg": "未登录！"
+}
+2019-03-21 20:17:54,154 - logs… - INFO - {
+  "code": 101,
+  "msg": "未登录！"
+}
