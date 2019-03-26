@@ -7,6 +7,7 @@ import readConfig
 from common.configEmail import send_email
 import common.Log
 
+
 # send_mail = send_email()
 path = getpathInfo.get_Path()
 report_path = os.path.join(path, 'result')
@@ -91,6 +92,7 @@ class AllTest:
             print("*********TEST END*********")
             # log.info("*********TEST END*********")
             fp.close()
+
 
        # 判断邮件发送的开关
        # if on_off == 'on':
