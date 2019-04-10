@@ -9,11 +9,17 @@ import readExcel
 pythoncom.CoInitialize()
 
 url = geturlParams.GeturlParams().get_url()  # 调用geturlParams获取拼接的URL
-shop_xls = readExcel.readExcel().get_xls('userCase.xlsx', 'shop')
+shopAll_xls = readExcel.readExcel().get_xls('userCase.xlsx', 'shop')
+
+shop_xls = []
+for i in shopAll_xls:
+    if i[0] =='GetAvailableCoupons':
+        shopData = i[1:]
+        shop_xls.append(shopData)
 
 
 @paramunittest.parametrized(*shop_xls)
-class TestGetBigLevelPrizeList(unittest.TestCase):
+class GetAvailableCoupons(unittest.TestCase):
     def setParameters(self, case_name, path, query, method):
 
         self.case_name = str(case_name)
@@ -48,17 +54,21 @@ class TestGetBigLevelPrizeList(unittest.TestCase):
         :return:
         """
         url1 = url + self.path
+        print(url1)
         new_url = url1 + "&" + self.query
         data1 = dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(new_url).query))
         # 将一个完整的URL中的name=&pwd=转换为{'name':'xxx','pwd':'bbb'}
         info = RunMain().run_main(method=self.method, url=url, data=data1)  # 根据Excel中的method调用run_main来进行requests请求，并拿到响应
         ss = json.loads(info)
         # 将响应转换为字典格式
-        if self.case_name == 'test_getBigLevelPrizeList_normal':  # 如果case_name是login，说明合法，返回的code应该为200
-            self.assertEqual(ss['code'], 200)
-        if self.case_name == 'test_getBigLevelPrizeList_noUserId':  # 同上
-            self.assertEqual(ss['code'], 101)
-        if self.case_name == 'test_getBigLevelPrizeList_noToken':  # 同上
-            self.assertEqual(ss['code'], 101)
-        if self.case_name == 'test_getBigLevelPrizeList_noAll':  # 同上
-            self.assertEqual(ss['code'], 101)
+        if self.case_name == 'test_getAvailableCoupons_normal':  # 如果case_name是login，说明合法，返回的code应该为200
+            self.assertEqual(ss['code'], 0)
+            self.assertIn(ss['msg'], '操作成功')
+        if self.case_name == 'test_getAvailableCoupons_noToken':  # 同上
+            self.assertIn(ss['msg'], '未登录')
+        if self.case_name == 'test_getAvailableCoupons_noUserId':  # 同上
+            self.assertIn(ss['msg'], '未登录')
+        if self.case_name == 'test_getAvailableCoupons_noInfo':  # 同上
+            self.assertIn(ss['msg'], '下单信息传参不能为空')
+        if self.case_name == 'test_getShoppingCart_noAll':  # 同上
+            self.assertIn(ss['msg'], '下单信息传参不能为空')

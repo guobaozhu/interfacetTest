@@ -20,9 +20,7 @@ class AllTest:
         global resultPath
         resultPath = os.path.join(report_path, "report.html")  # result/report.html
         self.caseListFile = os.path.join(path, "caselist.txt")  # 配置执行哪些测试文件的配置文件路径
-        print(self.caseListFile)
         self.caseFile = os.path.join(path, "testCase")  # 真正的测试断言文件路径
-        print(self.caseFile)
         self.caseList = []
         log.info('resultPath'+resultPath)  # 将resultPath的值输入到日志，方便定位查看问题
         log.info('caseListFile'+self.caseListFile)  # 同理
@@ -39,7 +37,6 @@ class AllTest:
             if data != '' and not data.startswith("#"):  # 如果data非空且不以#开头
                 self.caseList.append(data.replace("\n", ""))  # 读取每行数据会将换行转换为\n，去掉每行数据中的\n
         fb.close()
-        print(self.caseList)
 
     def set_case_suite(self):
         """
@@ -54,7 +51,6 @@ class AllTest:
             print(case_name+".py")  # 打印出取出来的名称
             # 批量加载用例，第一个参数为用例存放路径，第一个参数为路径文件名
             discover = unittest.defaultTestLoader.discover(self.caseFile, pattern=case_name + '.py', top_level_dir=None)
-            print(discover)
             suite_module.append(discover)  # 将discover存入suite_module元素组
             print('suite_module:'+str(suite_module))
         if len(suite_module) > 0:  # 判断suite_module元素组是否存在元素
@@ -65,7 +61,6 @@ class AllTest:
             print('else:')
             return None
         return test_suite  # 返回测试集
-        print(test_suite)
 
     def run(self):
         """
@@ -107,3 +102,7 @@ class AllTest:
 
 if __name__ == '__main__':
     AllTest().run()
+
+
+
+

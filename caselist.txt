@@ -1,4 +1,6 @@
-testCase/testcase
+testCase/shop/getShoppingCart_test
+testCase/shop/getAvailableCoupons_test
+testCase/shop/getV3OrdersByUser_test
 #user/test02case
 #user/test03case
 #user/test04case
