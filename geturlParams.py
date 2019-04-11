@@ -5,7 +5,7 @@ readconfig = readConfig.ReadConfig()
 # 定义一个方法，将从配置文件中读取的进行拼接
 class GeturlParams():
     def get_url(self):
-        new_url = readconfig.get_http('scheme') + '://' + readconfig.get_http('serverurl') + '?'
+        new_url = readconfig.get_http('scheme') + '://' + readconfig.get_http('serverUrl') + '?'
         return new_url
 
 

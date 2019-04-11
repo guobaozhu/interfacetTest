@@ -1,4 +1,11 @@
 #  coding=utf-8
+import datetime
+import io
+import sys
+import time
+import unittest
+from xml.sax import saxutils
+import sys
 """
 A TestRunner for use with the Python unit testing framework. It
 generates a HTML report to show the result at a glance.
@@ -100,13 +107,6 @@ Version in 0.7.1
 # TODO: color stderr
 # TODO: simplify javascript using ,ore than 1 class in the class attribute?
 
-import datetime
-import io
-import sys
-import time
-import unittest
-from xml.sax import saxutils
-import sys
 
 # ------------------------------------------------------------------------
 # The redirectors below are used to capture output during testing. Output

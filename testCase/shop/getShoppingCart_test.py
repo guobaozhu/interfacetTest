@@ -11,9 +11,10 @@ pythoncom.CoInitialize()
 url = geturlParams.GeturlParams().get_url()  # 调用geturlParams获取拼接的URL
 shopAll_xls = readExcel.readExcel().get_xls('userCase.xlsx', 'shop')
 
+# 获取该接口测试用例所有数据
 shop_xls = []
 for i in shopAll_xls:
-    if i[0] =='GetShoppingCart':
+    if i[0] == 'GetShoppingCart':
         shopData = i[1:]
         shop_xls.append(shopData)
 
@@ -57,19 +58,20 @@ class GetShoppingCart(unittest.TestCase):
         new_url = url1 + "&" + self.query
         data1 = dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(new_url).query))
         # 将一个完整的URL中的name=&pwd=转换为{'name':'xxx','pwd':'bbb'}
-        info = RunMain().run_main(method=self.method, url=url, data=data1)  # 根据Excel中的method调用run_main来进行requests请求，并拿到响应
+        info = RunMain().run_main(method=self.method, url=url, data=data1)
+        # 根据Excel中的method调用run_main来进行requests请求，并拿到响应
         ss = json.loads(info)
         # 将响应转换为字典格式
-        if self.case_name == 'test_getShoppingCart_normal':  # 如果case_name是login，说明合法，返回的code应该为200
+        if self.case_name == 'test_getShoppingCart_normal':  # 断言
             self.assertEqual(ss['code'], 0)
             self.assertIn(ss['msg'], '操作成功.')
-        if self.case_name == 'test_getShoppingCart_noSize':  # 同上
+        if self.case_name == 'test_getShoppingCart_noSize':
             self.assertIn(ss['msg'], 'size非法！')
-        if self.case_name == 'test_getShoppingCart_noPage':  # 同上
+        if self.case_name == 'test_getShoppingCart_noPage':
             self.assertIn(ss['msg'], 'page非法！')
-        if self.case_name == 'test_getShoppingCart_noUserId':  # 同上
+        if self.case_name == 'test_getShoppingCart_noUserId':
             self.assertIn(ss['msg'], '未登录！')
-        if self.case_name == 'test_getShoppingCart_noToken':  # 同上
+        if self.case_name == 'test_getShoppingCart_noToken':
             self.assertIn(ss['msg'], '未登录！')
-        if self.case_name == 'test_getShoppingCart_noAll':  # 同上
+        if self.case_name == 'test_getShoppingCart_noAll':
             self.assertIn(ss['msg'], 'page非法！')

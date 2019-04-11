@@ -1,10 +1,8 @@
 import os
-import common.HTMLTestRunner as HTMLTestRunner
-from HTMLTestReportCN import HTMLTestRunner
+# import common.HTMLTestRunner as HTMLTestRunner
+from common.HTMLTestReportCN import HTMLTestRunner
 import getpathInfo
 import unittest
-import readConfig
-from common.configEmail import send_email
 import common.Log
 
 
@@ -52,7 +50,7 @@ class AllTest:
             # 批量加载用例，第一个参数为用例存放路径，第一个参数为路径文件名
             discover = unittest.defaultTestLoader.discover(self.caseFile, pattern=case_name + '.py', top_level_dir=None)
             suite_module.append(discover)  # 将discover存入suite_module元素组
-            print('suite_module:'+str(suite_module))
+            # print('suite_module:'+str(suite_module))
         if len(suite_module) > 0:  # 判断suite_module元素组是否存在元素
             for suite in suite_module:  # 如果存在，循环取出元素组内容，命名为suite
                 for test_name in suite:  # 从discover中取出test_name，使用addTest添加到测试集
@@ -70,7 +68,7 @@ class AllTest:
         try:
             suit = self.set_case_suite()  # 调用set_case_suite获取test_suite
             print('try')
-            print(str(suit))
+            # print(str(suit))
             if suit is not None:  # 判断test_suite是否为空
                 print('if-suit')
                 fp = open(resultPath, 'wb')  # 打开result/20181108/report.html测试报告文件，如果不存在就创建

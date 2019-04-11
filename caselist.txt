@@ -1,10 +1,8 @@
 testCase/shop/getShoppingCart_test
 testCase/shop/getAvailableCoupons_test
 testCase/shop/getV3OrdersByUser_test
+testCase/shop/getV3OrderInfo_test
 #user/test02case
 #user/test03case
 #user/test04case
 #user/test05case
-#shop/test_shop_list
-#shop/test_my_shop
-#shop/test_new_shop
